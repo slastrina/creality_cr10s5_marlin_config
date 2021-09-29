@@ -1154,7 +1154,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 20
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1341,8 +1341,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 500 // Nozzle is at X4 when homed
-#define Y_BED_SIZE 500 // Nozzle is at Y2 when homed
+#define X_BED_SIZE 510 // Nozzle is at X4 when homed
+#define Y_BED_SIZE 510 // Nozzle is at Y2 when homed
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1576,7 +1576,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1645,7 +1645,7 @@
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
-  //#define MESH_EDIT_MENU        // Add a menu to edit mesh points
+  #define MESH_EDIT_MENU        // Add a menu to edit mesh points
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
@@ -1829,8 +1829,8 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 205
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_HOTEND 210
+#define PREHEAT_1_TEMP_BED     80
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
